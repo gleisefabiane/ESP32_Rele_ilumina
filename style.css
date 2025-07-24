@@ -1,48 +1,80 @@
-body{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(243, 229, 207);
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100nh;
+    min-height: 100vh;
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
-h1{
+h1 {
     margin-top: 10px;
-    font-size: 50px;
+    font-size: 60px;
     font-family: fantasy;
     color: brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-h2{
+h2 {
     font-size: 30px;
     margin-bottom: 0;
+    color: #4a3f35;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-.comodo{
+.comodo {
     border: 2px solid rgb(29, 28, 28);
-    border-radius:10px;
-    width: 200px;
+    border-radius: 10px;
+    width: 220px;
     margin-top: 15px;
+    background: linear-gradient(145deg, #f5e7d2, #e0d0b9);
+    box-shadow: 5px 5px 15px #cbbca5, -5px -5px 15px #ffffff;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
 }
 
-.lampada
-{
+.comodo:hover {
+    transform: scale(1.05);
+}
+
+.lampada {
     font-size: 70px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease-in-out;
 }
 
-button{
+
+button {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 5px;
-    font-size: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
     cursor: pointer;
     background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.acesa{
-    text-shadow: 0 -5px 30px rgb(182, 106, 1)
- }
+button:hover {
+    background-color: #4d4d4d;
+    transform: translateY(-2px);
+}
+
+.acesa {
+    text-shadow: 0 -5px 30px rgb(182, 106, 1), 0 0 20px rgba(255, 140, 0, 0.7);
+}
+
+.comodos-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
