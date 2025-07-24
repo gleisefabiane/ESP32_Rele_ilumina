@@ -98,18 +98,18 @@ void mensagemRecebida(char *topico, byte *payload, unsigned int tamanho)
   if (strcmp(topico, MQTT_TOPICO_SALA_LIGAR) == 0)
   {
     // ATENÇÃO SE USAR O RELE USADO É INVERTIDO O ESTADO PARA LIGAR - LOW***
-    digitalWrite(PINO_RELE_SALA, HIGH);
+    digitalWrite(PINO_RELE_SALA, LOW);
   }
   else if (strcmp(topico, MQTT_TOPICO_SALA_DESLIGAR) == 0) 
   {
-    digitalWrite(PINO_RELE_SALA, LOW);
+    digitalWrite(PINO_RELE_SALA, HIGH);
   }
    else if (strcmp(topico, MQTT_TOPICO_COZINHA_LIGAR) == 0) 
   {
-    digitalWrite(PINO_RELE_COZINHA, HIGH);
+    digitalWrite(PINO_RELE_COZINHA, LOW);
   }
    else if (strcmp(topico, MQTT_TOPICO_COZINHA_DESLIGAR) == 0) 
   {
-    digitalWrite(PINO_RELE_COZINHA, LOW);
+    digitalWrite(PINO_RELE_COZINHA, HIGH);
   }
 }
