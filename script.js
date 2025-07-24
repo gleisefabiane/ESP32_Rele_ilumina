@@ -3,6 +3,21 @@
 let lampadaSalaLigada = false
 let lampadaCozinhaLigada = false
 
+let clienteWeb = null;
+
+const clientId = 'Esp32' + Math.floor(Math.random() * 900) + 100;
+clienteWeb = new Paho.MQTT.Client('broker.hivemq.com', 8884, clientId);
+
+clienteWeb.connect({   
+    useSSL: true, 
+    onSuccess: function() {
+        alert('A conexão com Broker foi bem sucedida')
+    },
+    onFailure: function() {
+        alert('A conexão com Broker falhou')
+    }
+});
+
 
 function ligarSala(){
     if (lampadaSalaLigada == false){
